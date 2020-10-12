@@ -20,16 +20,28 @@ class Brachiosaurus implements Dinosaur{ //implement a new genus(Brachiosaurus)
 		return "Brachiosaurus";
 	}
 }
+
+class Velociraptor implements Dinosaur{ //implement a new genus(Velocirapor)
+	public String getDiet() {
+		return "Carnivore";
+	}
+	public String getGenus() {
+		return "Velocirapor";
+	}
+}
 public class Factory {
-	public static final int TYRANNOSAURUS = 0;
-	public static final int BRACHIOSAURUS = 1;
+	public enum Dinos { 
+		TYRANNOSAURUS,BRACHIOSAURUS,VELOCIRAPTOR
+	}
 	
-	public Dinosaur createDinosaur(int id) { //creates and returns object of type Dinosaur 
-		switch(id) {
+	public Dinosaur createDinosaur(Dinos d) { //creates and returns object of type Dinosaur 
+		switch(d) {
 			case TYRANNOSAURUS:
 				return new Tyrannosaurus();
 			case BRACHIOSAURUS:
 				return new Brachiosaurus();
+			case VELOCIRAPTOR:
+				return new Velociraptor();
 			default:
 				throw new IllegalArgumentException("Wrong number!");
 		}
