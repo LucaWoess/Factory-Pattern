@@ -8,9 +8,9 @@ public class FactoryPatternMain {
 		Dinosaur alpha = f.createDinosaur(Factory.TYRANNOSAURUS);
 		Dinosaur blue = f.createDinosaur(Factory.BRACHIOSAURUS);
 		
-		System.out.println(alpha.getName()+" ("+alpha+"): diet: "+alpha.getDiet());
-		System.out.println(delta.getName()+" ("+delta+"): diet: "+delta.getDiet());
-		System.out.println(blue.getName()+" ("+blue+"): diet: "+blue.getDiet());
+		System.out.println(alpha.getGenus()+" ("+alpha+"): diet: "+alpha.getDiet());
+		System.out.println(delta.getGenus()+" ("+delta+"): diet: "+delta.getDiet());
+		System.out.println(blue.getGenus()+" ("+blue+"): diet: "+blue.getDiet());
 	}
 
 }
